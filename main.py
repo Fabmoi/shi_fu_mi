@@ -48,6 +48,7 @@ while mon_score < fin and ton_score < fin:
     ton_signe = int(input("1 = PIERRE, 2 = FEUILLE, 3 = CISEAUX ? "))
     while ton_signe < 1 or ton_signe > 3:
         ton_signe = int(input('1 = PIERRE, 2 = FEUILLE, 3 = CISEAUX ? '))
+
     print("Vous choisissez ", end="")
     ecrire(ton_signe)
     mon_signe = randint(1, 3)
@@ -61,7 +62,7 @@ while mon_score < fin and ton_score < fin:
 
 def afficher_resultats():
     if mon_score == fin:
-        print("Je suis le meilleur")
+        print("Tu as perdu, je suis le meilleur")
     else:
         print("Tu es le vainqueur, je m'avoue vaincu")
 
