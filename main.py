@@ -42,7 +42,8 @@ print("Choisissez votre signe en écrivant le chiffre correspondant.")
 print("Sans oublier de dire CHI FOU MI en fesant votre choix")
 print("Le premier à " + str(fin) + " est le VAINQUEUR !")
 print()
-no_manche = 0
+
+
 while mon_score < fin and ton_score < fin:
     ton_signe = int(input("1 = PIERRE, 2 = FEUILLE, 3 = CISEAUX ? "))
     while ton_signe < 1 or ton_signe > 3:
@@ -56,3 +57,14 @@ while mon_score < fin and ton_score < fin:
     augmenter_scores(mon_signe, ton_signe)
     print("Vous avez", ton_score, "J'ai", mon_score)
     print()
+
+
+def afficher_resultats():
+    if mon_score == fin:
+        print("Je suis le meilleur")
+    else:
+        print("Tu es le vainqueur, je m'avoue vaincu")
+
+
+afficher_resultats()
+
